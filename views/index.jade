@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1 API FILE METADATA MICROSERVICE
+  h2 User stories:
+  p 1. I can submit a FormData object that includes a file upload.
+  p 2. When I submit something, I will receive the file size in bytes within the JSON response.
+  br
+  form(action="/file-metadata" method="POST" enctype="multipart/form-data")
+   input(type="file" name="file")
+   input(type="submit")
+  br
+  h2 Example output:
+  code {file_name: "wallpaper.jpg", size: 357177, type: "image/jpeg"}
+  
+  
